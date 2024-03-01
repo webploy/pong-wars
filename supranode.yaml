@@ -1,0 +1,4 @@
+script:
+  - mkdir dist
+  - mv index.html dist/index.html
+artifact: dist
