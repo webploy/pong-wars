@@ -1,4 +1,6 @@
 script:
-  - mkdir dist
-  - mv index.html dist/index.html
-artifact: dist
+  - mkdir _dist
+  - mv index.html _dist/index.html
+artifacts:
+  app:
+    path: _dist
