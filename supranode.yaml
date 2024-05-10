@@ -1,4 +1,5 @@
 script: 
+  - ls -la
   - mkdir _dist 
   - mv index.html _dist/index.html
   - mv video/index.html _dist/video/index.html
