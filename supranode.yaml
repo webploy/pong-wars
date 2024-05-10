@@ -1,4 +1,8 @@
-script: mkdir _dist && mv index.html _dist/index.html
+script: 
+  - mkdir _dist 
+  - mv index.html _dist/index.html
+  - mv video/index.html _dist/video/index.html
+  - mv supranode_demo.mp4 _dist/supranode_demo.mp4
 artifacts:
   app:
     path: _dist
