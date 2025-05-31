@@ -8,3 +8,10 @@ script:
 artifacts:
   app:
     path: _dist
+  nginx:
+    path: .
+
+routes:
+  - match: starts_with(request.path, '/nginx')
+    origin: nginx
+  - origin: app
