@@ -1,15 +1,16 @@
-script: 
-  - ls -la
-  - mkdir _dist 
-  - mkdir -p _dist/video
-  - mv index.html _dist/index.html
-  - mv video/index.html _dist/video/index.html
-  - mv supranode_demo.mp4 _dist/supranode_demo.mp4
-artifacts:
-  app:
-    path: _dist
-  nginx:
-    path: .
+build:
+  run: 
+    - ls -la
+    - mkdir _dist 
+    - mkdir -p _dist/video
+    - mv index.html _dist/index.html
+    - mv video/index.html _dist/video/index.html
+    - mv supranode_demo.mp4 _dist/supranode_demo.mp4
+  artifacts:
+    app:
+      path: _dist
+    nginx:
+      path: .
 
 routes:
   - match: starts_with(request.path, '/nginx')
